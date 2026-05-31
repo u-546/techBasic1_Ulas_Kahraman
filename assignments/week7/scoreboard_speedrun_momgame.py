@@ -1,3 +1,6 @@
+#### I've thought of keeping track of the time player takes until finishing the game, like a speedrun. It will also record the type of endings they've got.
+#### PyCharm itself is quite smart with errors and anything syntax related especially, but Claude really helped out with the logic behind the save system.
+
 import time
 import os
 from datetime import datetime
@@ -112,7 +115,7 @@ name= input("What's your name?").strip() or "Lil kid"
 
 if DEBUG:
     print(f"\n[DEBUG MODE] Skipping game. Using placeholder values.")
-    elapsed = 42.00
+    elapsed = 99.00
     outcome = "DEBUG - test run"
 else:
     slow_print(f"\nOkay {name}. You're in the mall right now. And you have lost your mom.")
