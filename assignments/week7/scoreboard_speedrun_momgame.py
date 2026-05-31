@@ -1,9 +1,8 @@
-"I've thought of keeping track of the time player takes until finishing the game, like a speedrun. It will also record the type of endings they've got. "
-"PyCharm itself is quite smart with errors and anything syntax related especially, but Claude really helped out with the logic behind the save system. "
-
 import time
 import os
 from datetime import datetime
+
+DEBUG = True
 
 RECORDS_FILE = "mom_speedrun.txt"
 
@@ -110,50 +109,56 @@ def display_leaderboard(records, highlight_name=None):
 slow_print("WHERE IS YOUR MOM")
 pause()
 name= input("What's your name?").strip() or "Lil kid"
-slow_print(f"\nOkay {name}. You're in the mall right now. And you have lost your mom.")
-pause()
-#range check
-print("\nHowm many minutes ago did you last see your mom?")
-mins = get_number_in_range("Enter a number (1 to 10): ", 1, 10)
-slow_print(f"\n{mins} minutes?? {name}, she's long gone dude. Anyway we'll find her")
-pause()
-print("\nWhere do you look first?")
-print(" 1 = Scented candle store")
-print(" 2 = Food court")
 
-# Timer starts here, right before the real choices
-run_start = time.time()
-
-choice = input("Pick 1 or 2: ").strip()
-if choice == "1":
-    slow_print("\nYou head to the scented candle store. It smells like your grandma's house.")
-    pause()
-    slow_print("You see someone with similar hair with your mom. You tap her shoudler")
-    pause()
-    #nest nest
-    tap = input("You wanna say 'mom?' out loud. Do you? yes/no: ").strip().lower()
-    if tap == "yes":
-        slow_print("\nShe turns around. Not your mom. You are embarrased. Start excessively crying on the floor.")
-        pause()
-        slow_print("But then a voice behind you shouts! It's your mom!! She hear you crying.")
-        slow_print("\nMOM FOUND YOU. YOU WIN.")
-        outcome = "WIN - dramatic rescue"
-    else:
-        slow_print("\nYou have social anxiety and just stand there holding a candle")
-        slow_print("Hours pass. You smell like the candle now.")
-        slow_print("You do not know when the candle ends and where you begin anymore")
-        pause()
-        slow_print("\n YOU ARE A CANDLE FOR ETERNITY NOW. YOU LOST")
-        outcome = "LOSE - became a candle"
+if DEBUG:
+    print(f"\n[DEBUG MODE] Skipping game. Using placeholder values.")
+    elapsed = 42.00
+    outcome = "DEBUG - test run"
 else:
-    slow_print("\nYou go to the food court. You remember your mom saying she was hungry")
+    slow_print(f"\nOkay {name}. You're in the mall right now. And you have lost your mom.")
     pause()
-    slow_print("You look around... There she is!!! She's on her phone, very calm")
-    slow_print("She didn't even notice you were gone.")
-    slow_print("\n MOM FOUND! YOU WIN!")
-    outcome = "WIN - food court"
+    #range check
+    print("\nHowm many minutes ago did you last see your mom?")
+    mins = get_number_in_range("Enter a number (1 to 10): ", 1, 10)
+    slow_print(f"\n{mins} minutes?? {name}, she's long gone dude. Anyway we'll find her")
+    pause()
+    print("\nWhere do you look first?")
+    print(" 1 = Scented candle store")
+    print(" 2 = Food court")
 
-elapsed = time.time() - run_start
+    # Timer starts here, right before the real choices
+    run_start = time.time()
+
+    choice = input("Pick 1 or 2: ").strip()
+    if choice == "1":
+        slow_print("\nYou head to the scented candle store. It smells like your grandma's house.")
+        pause()
+        slow_print("You see someone with similar hair with your mom. You tap her shoudler")
+        pause()
+        #nest nest
+        tap = input("You wanna say 'mom?' out loud. Do you? yes/no: ").strip().lower()
+        if tap == "yes":
+            slow_print("\nShe turns around. Not your mom. You are embarrased. Start excessively crying on the floor.")
+            pause()
+            slow_print("But then a voice behind you shouts! It's your mom!! She hear you crying.")
+            slow_print("\nMOM FOUND YOU. YOU WIN.")
+            outcome = "WIN - dramatic rescue"
+        else:
+            slow_print("\nYou have social anxiety and just stand there holding a candle")
+            slow_print("Hours pass. You smell like the candle now.")
+            slow_print("You do not know when the candle ends and where you begin anymore")
+            pause()
+            slow_print("\n YOU ARE A CANDLE FOR ETERNITY NOW. YOU LOST")
+            outcome = "LOSE - became a candle"
+    else:
+        slow_print("\nYou go to the food court. You remember your mom saying she was hungry")
+        pause()
+        slow_print("You look around... There she is!!! She's on her phone, very calm")
+        slow_print("She didn't even notice you were gone.")
+        slow_print("\n MOM FOUND! YOU WIN!")
+        outcome = "WIN - food court"
+
+    elapsed = time.time() - run_start
 
 print()
 slow_print("Thanks for playing.")
