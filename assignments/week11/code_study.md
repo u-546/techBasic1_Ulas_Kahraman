@@ -26,11 +26,13 @@ This eases my brain a bit because I am also keeping an eye around for codes that
 A part where I decided to look in more closely is the drag and drop part. I found how it works interesting.
 
 It happens to first follow the mouse's location, then makes the logo follow it.
+
 new_x = e.x and new_y = e.y logs the mouse position.
 And image_canvas.coords(logo, new_x, new_y) tells it to move the logo to mouse position.
 These seem to be possible with the help of customtkinter. This one might come in handy for me later on.
 
 Finally defining borders for the mouse to go is appearently also a problem. So the author's fix is pretty simple, I could understand this without looking it up.
+
 pythonif new_x < 0:
     new_x = 0
 elif new_x + label_width > canvas_width:
