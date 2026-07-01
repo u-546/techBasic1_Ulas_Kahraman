@@ -22,7 +22,7 @@ move_logo() lets us drag the watermark with the mouse.
 move_text does the same thing with text.
 the rest are similar to these, then comes save_image which saves where everything has been put and saves them into one image.
 
-Overall, this file with about 300 hundred lines basically builds up the ui as far as I understood. Another file (watermark.py) is the actual thing that commands to stamp the mark onto the image.
+Overall, this file with about 300 hundred lines basically builds up the ui as far as I understood. It's building a lot of frames and buttons and defining borders and errors. Another file (watermark.py) is the actual thing that commands to stamp the mark onto the image.
 Most of the pop-up stuff like the file picker and color picker come from the imported libraries, so they're not coded from scratch. 
 This eases my brain a bit because I am also keeping an eye around for codes that I can take example of for my final project.
 
