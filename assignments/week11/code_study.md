@@ -1,3 +1,6 @@
+(please read this in "code" seciton on github"
+
+
 The code I've decided to study is https://github.com/geekcomputers/Python/blob/master/Image-watermarker/app.py
 It's an application to put in watermarks on images.
 We start off with some imported libraries. As I looked them up these seem to help with a lot of different stuff. :
