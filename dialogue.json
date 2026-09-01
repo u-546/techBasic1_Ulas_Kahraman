@@ -1,0 +1,529 @@
+{
+    "start": {
+        "text": "You step into the office. It's quiet except for the clicking of a mouse. Arsenia is hunched over her laptop, scrolling through what looks like a few hundred nearly identical photos.",
+        "sprite": "default",
+        "choices": [
+            {"text": "...", "next": "arsenia_greet", "affection": 0}
+        ]
+    },
+    "arsenia_greet": {
+        "text": "Oh, hey! You're finally here. Come in, come in.",
+        "sprite": "happy",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "Hey Arsenia! What are you working on?", "next": "arsenia_meeting_ask", "affection": 5},
+            {"text": "Uh... hi. Sorry, is this a bad time?", "next": "arsenia_reassure", "affection": 0}
+        ]
+    },
+    "arsenia_reassure": {
+        "text": "A bad time? No way, I've been sitting here for two hours, I NEED the distraction. Sit down.",
+        "sprite": "happy",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "arsenia_meeting_ask", "affection": 0}
+        ]
+    },
+    "arsenia_meeting_ask": {
+        "text": "Anyway, before I forget — have you done your major introduction meeting yet?",
+        "sprite": "default",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "Yeah, I already did it.", "next": "meeting_yes", "affection": 4},
+            {"text": "No, not yet.", "next": "meeting_no", "affection": -8}
+        ]
+    },
+    "meeting_yes": {
+        "text": "Oh good, one less thing to worry about. How'd it go?",
+        "sprite": "happy",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "Kind of overwhelming, honestly.", "next": "meeting_yes_a", "affection": 4},
+            {"text": "Pretty straightforward, I think.", "next": "meeting_yes_b", "affection": 2}
+        ]
+    },
+    "meeting_yes_a": {
+        "text": "Yeah, that sounds about right. It gets easier once you're actually around people instead of just reading about it.",
+        "sprite": "default",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "lab_intro", "affection": 0}
+        ]
+    },
+    "meeting_yes_b": {
+        "text": "Lucky. Mine felt like it lasted three years. Anyway, come on, let me show you around properly.",
+        "sprite": "happy",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "lab_intro", "affection": 0}
+        ]
+    },
+    "meeting_no": {
+        "text": "Wait, seriously? Okay, you should probably go get that sorted first, they get weirdly strict about it.",
+        "sprite": "sad",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "I'll go do it right after this.", "next": "meeting_no_a", "affection": 4},
+            {"text": "Eh, five more minutes won't hurt.", "next": "meeting_no_b", "affection": -12}
+        ]
+    },
+    "meeting_no_a": {
+        "text": "Good answer. Okay, quick tour first, then you're actually going, promise me.",
+        "sprite": "happy",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "Promise.", "next": "lab_intro", "affection": 2}
+        ]
+    },
+    "meeting_no_b": {
+        "text": "...That's exactly the kind of decision that comes back to bite you later. But fine, come look around first.",
+        "sprite": "pokerface",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "lab_intro", "affection": 0}
+        ]
+    },
+    "lab_intro": {
+        "text": "This is the lab, by the way. Don't let the name fool you.",
+        "sprite": "default",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "What do you mean?", "next": "lab_explain", "affection": 0}
+        ]
+    },
+    "lab_explain": {
+        "text": "I mean we technically do work here sometimes. But mostly? This is where everyone ends up playing video games or running a DnD campaign at like eleven at night.",
+        "sprite": "happy",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "Wait, you guys actually play DnD here?", "next": "lab_dnd", "affection": 4},
+            {"text": "What kind of games?", "next": "lab_games", "affection": 2}
+        ]
+    },
+    "lab_dnd": {
+        "text": "Oh, religiously. We've got a campaign that's been running for months now. I play a character who's supposed to be very serious and composed. I am not very serious and composed.",
+        "sprite": "sparkle",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "What's your character like?", "next": "lab_dnd_character", "affection": 4},
+            {"text": "...", "next": "lab_games", "affection": 0}
+        ]
+    },
+    "lab_dnd_character": {
+        "text": "She's a stoic elven ranger who's supposedly haunted by a tragic past. In practice, she's mostly just haunted by the fact that I keep rolling 1s on stealth checks.",
+        "sprite": "happy",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "That's amazing.", "next": "lab_dnd_character_answer_a", "affection": 7},
+            {"text": "So basically the opposite of you.", "next": "lab_dnd_character_answer_b", "affection": 1}
+        ]
+    },
+    "lab_dnd_character_answer_a": {
+        "text": "Right?? Nobody in that party has ever once seen her actually be stealthy. She just walks into rooms and immediately gets spotted. Tragic backstory, zero coordination.",
+        "sprite": "sparkle",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "lab_games", "affection": 0}
+        ]
+    },
+    "lab_dnd_character_answer_b": {
+        "text": "Hey! I resent that. ...Okay it's a little true. Fine, moving on.",
+        "sprite": "embarrassed",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "lab_games", "affection": 0}
+        ]
+    },
+    "lab_games": {
+        "text": "Depends on the night, honestly. Whatever fits on one screen and doesn't require anyone to actually think. Low effort, high chaos, that's the vibe here.",
+        "sprite": "happy",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "Sounds like a great use of a research lab.", "next": "lab_joke", "affection": 2},
+            {"text": "That actually sounds fun.", "next": "lab_agree", "affection": 4}
+        ]
+    },
+    "lab_joke": {
+        "text": "Hey, morale is part of productivity! That's basically science.",
+        "sprite": "happy",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "lab_snacks", "affection": 0}
+        ]
+    },
+    "lab_agree": {
+        "text": "Right? You're gonna fit in just fine.",
+        "sprite": "happy",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "lab_snacks", "affection": 0}
+        ]
+    },
+    "lab_snacks": {
+        "text": "Oh, also, that cabinet over there is the snack cabinet. Everything in it is fair game except the good cookies on the top shelf. Those are mine. I will know if they're gone.",
+        "sprite": "default",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "Noted. The good cookies are off limits.", "next": "lab_snacks_a", "affection": 4},
+            {"text": "How would you even know?", "next": "lab_snacks_b", "affection": -3}
+        ]
+    },
+    "lab_snacks_a": {
+        "text": "See, this is why I like you already.",
+        "sprite": "happy",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "photo_transition", "affection": 0}
+        ]
+    },
+    "lab_snacks_b": {
+        "text": "I count them. Don't test me.",
+        "sprite": "pokerface",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "photo_transition", "affection": 0}
+        ]
+    },
+    "photo_transition": {
+        "text": "She turns her laptop screen toward you. It's the same wall of nearly identical photos from earlier.",
+        "sprite": "default",
+        "choices": [
+            {"text": "...", "next": "arsenia_push", "affection": 0}
+        ]
+    },
+    "arsenia_push": {
+        "text": "I don't like any of them! We need to take more pictures!",
+        "sprite": "angry",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "Why? I think they all look great. Is it really that impor—", "next": "arsenia_push2", "affection": 0},
+            {"text": "Aura isn't even a real photography term...", "next": "skeptic_branch1", "affection": -6}
+        ]
+    },
+    "arsenia_push2": {
+        "text": "YOU DON'T UNDERSTAND. I'm not saying they're bad! They're just... MEDIOCRE. I can't feel even the slightest hint of aura in any of them.",
+        "sprite": "superangry",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "Huh? Aura? What's that?", "next": "arsenia_aura1", "affection": 0}
+        ]
+    },
+    "skeptic_branch1": {
+        "text": "It's not about the TERM. It's about the FEELING. Ugh, fine, let me just explain it properly instead of arguing with you.",
+        "sprite": "angry",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "Okay, okay. Explain.", "next": "arsenia_aura1", "affection": 2}
+        ]
+    },
+    "arsenia_aura1": {
+        "text": "You were giving me your opinion without even knowing what aura is? AURA IS THE EFFECT YOU GIVE OFF TO THE WORLD. THINK. You're walking down the street and your shoelaces come undone. What happens?",
+        "sprite": "default",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "Umm... I... tie them?", "next": "arsenia_aura2", "affection": 0}
+        ]
+    },
+    "arsenia_aura2": {
+        "text": "OF COURSE. BUT THAT'S JUST THE RESULT. If you want to specialize in a field, you have to focus on the process before the results! You need to delve into the psychological and sociological implications of the situation.",
+        "sprite": "default",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "We're talking about tying my shoelaces, right? Is this really that important?", "next": "arsenia_aura3", "affection": -6},
+            {"text": "Okay professor, go on.", "next": "arsenia_aura3", "affection": 5}
+        ]
+    },
+    "arsenia_aura3": {
+        "text": "HYPOCRITE. Let me prove it to you. A shoe you regularly wear isn't going to suddenly become so loose that you can't walk properly just because the laces came undone. You can still walk perfectly fine. So then, what is it that makes you feel like you HAVE to tie them immediately?",
+        "sprite": "crying",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "Because... they're flapping around while I walk?", "next": "arsenia_aura4", "affection": 0}
+        ]
+    },
+    "arsenia_aura4": {
+        "text": "EXACTLY! Even when we think about something this superficially, we can already perceive the depth of the underlying problem.",
+        "sprite": "happy",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "I still don't get it. Keep going.", "next": "arsenia_aura5", "affection": 0},
+            {"text": "Wait, I think I actually get it now.", "next": "shortcut_understanding", "affection": 0}
+        ]
+    },
+    "shortcut_understanding": {
+        "text": "...Really? Say it back to me, then. What's the shoelace actually about?",
+        "sprite": "surprised",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "It's about losing control in front of everyone.", "next": "shortcut_correct", "affection": 10},
+            {"text": "Uh... it's about the shoelace being annoying?", "next": "shortcut_wrong", "affection": -8}
+        ]
+    },
+    "shortcut_correct": {
+        "text": "...Huh. Okay, actually, yeah. That's basically it. You skipped the whole lecture and still got there. I'm almost offended.",
+        "sprite": "sparkle",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "arsenia_pleased", "affection": 0}
+        ]
+    },
+    "shortcut_wrong": {
+        "text": "NO. Absolutely not. Sit back down, we're doing this properly.",
+        "sprite": "angry",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "Fine, fine.", "next": "arsenia_aura5", "affection": 0}
+        ]
+    },
+    "arsenia_aura5": {
+        "text": "Fine. Let me continue.",
+        "sprite": "default",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "arsenia_monologue1", "affection": 0}
+        ]
+    },
+    "arsenia_monologue1": {
+        "text": "From an outside perspective, shoelaces are things that are supposed to be tied because they tighten the shoe and keep it wearable. So when you begin tying them, your social status doesn't change.",
+        "sprite": "default",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "arsenia_monologue2", "affection": 0}
+        ]
+    },
+    "arsenia_monologue2": {
+        "text": "THAT IS MERELY THE VISIBLE SURFACE OF SOCIETY. What is actually happening is that your shoelaces are flapping around as you walk. You're openly declaring your lack of control and your helplessness to the entire world.",
+        "sprite": "superangry",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "That feels a little dramatic.", "next": "arsenia_defensive", "affection": -6},
+            {"text": "...", "next": "arsenia_monologue3", "affection": 0}
+        ]
+    },
+    "arsenia_defensive": {
+        "text": "DRAMATIC? This is the most honest anyone has ever been with you about shoelaces. Sit down.",
+        "sprite": "angry",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "arsenia_monologue3", "affection": 0}
+        ]
+    },
+    "arsenia_monologue3": {
+        "text": "In a world where everyone has come here to play a role, your shoelaces are moving against your will. By allowing something this insignificant to show you have no control over your surroundings, you're sending everyone around you a message: I AM WEAK.",
+        "sprite": "default",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "arsenia_monologue4", "affection": 0}
+        ]
+    },
+    "arsenia_monologue4": {
+        "text": "NO! STOP FLAPPING! PLEASE! I SWEAR I'LL TIE YOU! And now you have to bend down to tie them.",
+        "sprite": "crying",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "arsenia_monologue5", "affection": 0}
+        ]
+    },
+    "arsenia_monologue5": {
+        "text": "At this point, you have two choices. Either you stop right in the middle of the road and get in everyone's way, or you step aside because you're afraid of inconveniencing other people.",
+        "sprite": "default",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "arsenia_monologue6", "affection": 0}
+        ]
+    },
+    "arsenia_monologue6": {
+        "text": "And THAT is where you openly admit: 'I was so afraid that something this trivial might inconvenience other people that I had to find somewhere out of the way to tie my shoelaces.' In other words: 'I cared this much about something this small.'",
+        "sprite": "crying",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "arsenia_monologue7", "affection": 0}
+        ]
+    },
+    "arsenia_monologue7": {
+        "text": "And THAT is when your mask falls off. Unfortunately, though... you're the only one whose mask has fallen. Everyone else keeps playing their own little game of indifference, normalizing everything that comes their way.",
+        "sprite": "sad",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "arsenia_monologue8", "affection": 0}
+        ]
+    },
+    "arsenia_monologue8": {
+        "text": "And there, with your mask lying at your feet, you become the only person left who actually cares that the world keeps turning.",
+        "sprite": "default",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "player_reaction", "affection": 0}
+        ]
+    },
+    "player_reaction": {
+        "text": "...",
+        "sprite": "default",
+        "speaker": "thought",
+        "choices": [
+            {"text": "...That actually kind of makes sense.", "next": "arsenia_pleased", "affection": 6},
+            {"text": "I have no idea what just happened.", "next": "arsenia_deflated", "affection": -4}
+        ]
+    },
+    "arsenia_pleased": {
+        "text": "FINALLY. Someone gets it. This is why we need more pictures, by the way. None of this comes through in a mediocre shot.",
+        "sprite": "sparkle",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "dnd_invite", "affection": 0}
+        ]
+    },
+    "arsenia_deflated": {
+        "text": "...That's fine too, honestly. Most people don't get it right away.",
+        "sprite": "pokerface",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "dnd_invite", "affection": 0}
+        ]
+    },
+    "dnd_invite": {
+        "text": "Oh, actually, we've got a session tonight. You should come. Fair warning, you'll probably die in the first ten minutes, everyone does.",
+        "sprite": "happy",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "I'm in.", "next": "dnd_invite_yes", "affection": 8},
+            {"text": "Maybe next time, I've got stuff to do.", "next": "dnd_invite_no", "affection": -8}
+        ]
+    },
+    "dnd_invite_yes": {
+        "text": "Yes! Okay, you need a character. Quick, gut instinct, what are you playing?",
+        "sprite": "sparkle",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "Something reckless. Big sword, no plan.", "next": "dnd_invite_yes_character_a", "affection": 3},
+            {"text": "Something clever. Sneaky, thinks ahead.", "next": "dnd_invite_yes_character_b", "affection": 3}
+        ]
+    },
+    "dnd_invite_yes_character_a": {
+        "text": "A menace. I love it. You're going to die immediately and I respect that.",
+        "sprite": "happy",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "closing_start", "affection": 0}
+        ]
+    },
+    "dnd_invite_yes_character_b": {
+        "text": "Ooh, a planner. Careful, my ranger's been burned by 'clever' party members before. Mostly because their plans always somehow involve setting something on fire.",
+        "sprite": "happy",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "closing_start", "affection": 0}
+        ]
+    },
+    "dnd_invite_no": {
+        "text": "Aw, seriously? Okay, no pressure. What's got you tied up?",
+        "sprite": "sad",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "Just a lot going on right now, honestly.", "next": "dnd_invite_no_reason", "affection": 2},
+            {"text": "It's just not really my thing.", "next": "dnd_invite_no_reason", "affection": -6}
+        ]
+    },
+    "dnd_invite_no_reason": {
+        "text": "Fair enough. The offer's always open though, we run these pretty much every week.",
+        "sprite": "default",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "closing_start", "affection": 0}
+        ]
+    },
+    "closing_start": {
+        "text": "Anyway. This has been a lot for a first visit. Sorry about the whole shoelace speech.",
+        "sprite": "default",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "No, honestly, this was a good first day.", "next": "closing_banter_a", "affection": 5},
+            {"text": "Yeah, I need to go lie down.", "next": "closing_banter_b", "affection": -4}
+        ]
+    },
+    "closing_banter_a": {
+        "text": "Yeah? Good. Don't tell anyone I said this, but I was kind of nervous about the intro tour going well.",
+        "sprite": "embarrassed",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "final_choice", "affection": 0}
+        ]
+    },
+    "closing_banter_b": {
+        "text": "Ha, fair, this was a lot. Go recover, we'll break you in slowly.",
+        "sprite": "happy",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "final_choice", "affection": 0}
+        ]
+    },
+    "final_choice": {
+        "text": "Before you go, one last thing. Photo, for the lab wall. No pressure to have 'aura,' I'll take literally anything at this point.",
+        "sprite": "default",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "Sure, let's take one.", "next": "final_choice_a", "affection": 10},
+            {"text": "Next time. I really do need to go.", "next": "final_choice_b", "affection": -10}
+        ]
+    },
+    "final_choice_a": {
+        "text": "She holds up her phone, counts down way too seriously for a hallway photo, and takes the shot. She checks it, actually smiles for real, and nods once like she's approving a research paper.",
+        "sprite": "happy",
+        "choices": [
+            {"text": "...", "next": "ending_gate", "affection": 0}
+        ]
+    },
+    "final_choice_b": {
+        "text": "Okay, okay, next time. I'm holding you to that though.",
+        "sprite": "sad",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "ending_gate", "affection": 0}
+        ]
+    },
+    "ending_gate": {
+        "sprite": "default",
+        "ending_check": [
+            {"min": 88, "next": "ending_high"},
+            {"min": 30, "next": "ending_mid"},
+            {"min": -999, "next": "ending_low"}
+        ]
+    },
+    "ending_high": {
+        "text": "Arsenia goes quiet for a second, which for her is basically an eternity. Then: 'Okay, don't make this weird, but — do you want to grab coffee sometime? Not lab coffee. Actual coffee, actual chairs, no whiteboard involved.'",
+        "sprite": "embarrassed",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "ending_high2", "affection": 0}
+        ]
+    },
+    "ending_high2": {
+        "text": "You say yes without even really thinking about it. She looks genuinely pleased, like this went better than she expected.",
+        "sprite": "sparkle",
+        "choices": []
+    },
+    "ending_mid": {
+        "text": "Something about the moment feels different, so — maybe against your better judgment — you lean in. Arsenia leans back immediately, hand up, laughing but firm. 'Whoa — okay, no, not that. We're good, I promise. Just... not that.'",
+        "sprite": "surprised",
+        "choices": [
+            {"text": "...", "next": "ending_mid2", "affection": 0}
+        ]
+    },
+    "ending_mid2": {
+        "text": "It's awkward for about four seconds, and then she just moves on like nothing happened, already talking about photos again. Somehow that makes it easier. You're friends. Good ones, probably. Just — apparently not that.",
+        "sprite": "happy",
+        "choices": []
+    },
+    "ending_low": {
+        "text": "Arsenia's smile doesn't quite reach her eyes anymore. 'Hey, so... I think it's probably best if you don't come back to the lab. Nothing personal, I just don't think this is really your scene.'",
+        "sprite": "sad",
+        "speaker": "Arsenia",
+        "choices": [
+            {"text": "...", "next": "ending_low2", "affection": 0}
+        ]
+    },
+    "ending_low2": {
+        "text": "She says it kindly, but it's clearly final. You nod, say something forgettable, and let yourself out. The lab door closes quietly behind you.",
+        "sprite": "default",
+        "choices": []
+    }
+}
